@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* Thiết lập cơ bản cho toàn bộ trang */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Khung chính của trang CV */
+
+.resume {
+  background: #ffffff;
+  max-width: 820px;
+  width: 100%;
+  padding: 42px 50px;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+/* Header chứa ảnh và giới thiệu cá nhân */
+header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+/* Thanh điều hướng phía trên */
+.page-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* Kiểu cho liên kết điều hướng */
+.page-nav a {
+  text-decoration: none;
+  color: #4338ca;
+  background: #eef2ff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi rê chuột hoặc nút đang được chọn */
+.page-nav a:hover,
+.page-nav a.active {
+  background: #4338ca;
+  color: #fff;
+}
+
+/* Kiểu thẻ thông tin phụ (nếu dùng thêm) */
+.info-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+/* Kiểu cho ảnh avatar trong phần header */
+.photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* Kiểu cho tên ứng viên */
+.header-text h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+  color: #111827;
+  font-weight: 700;
+}
+
+/* Kiểu cho chức danh hoặc thông tin ngắn */
+.header-text p {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Kiểu cho khung thông tin liên hệ */
+.contact {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* Hiển thị các mục liên hệ cách nhau */
+.contact span {
+  display: inline-block;
+  margin: 0 14px 8px 0;
+}
+
+/* Khoảng cách giữa các section */
+section {
+  margin-bottom: 30px;
+}
+
+/* Tiêu đề section với đường kẻ dưới */
+section h2 {
+  font-size: 22px;
+  color: #3730a3;
+  border-bottom: 2px solid #c7d2fe;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+}
+
+/* Mỗi mục nội dung trong phần kinh nghiệm hoặc học vấn */
+.item {
+  margin-bottom: 22px;
+}
+
+/* Tiêu đề phần con trong các mục kinh nghiệm hoặc học vấn */
+.item h3 {
+  font-size: 19px;
+  color: #111827;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Kiểu ngày tháng hoặc thời gian */
+.item .date {
+  font-size: 14px;
+  color: #64748b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Kiểu chữ chung cho đoạn văn và danh sách */
+.item p,
+.item li {
+  color: #334155;
+}
+
+/* Kiểu danh sách các nhiệm vụ và mô tả */
+.item ul {
+  margin-top: 8px;
+  padding-left: 18px;
+  color: #334155;
+}
+
+/* Hiển thị rõ các kỹ năng dưới dạng thẻ */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Kiểu từng thẻ kỹ năng */
+.skills li {
+  background: #e0e7ff;
+  border-radius: 999px;
+  padding: 8px 15px;
+  font-size: 15px;
+  color: #4338ca;
+  font-weight: 600;
+}
+
+/* Bố cục lưới chính của nội dung CV */
+.resume-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Phần nội dung chiếm toàn bộ không gian còn lại */
+.content {
+  flex: 1;
+}
+
+/* Cài đặt cho màn hình nhỏ */
+@media (max-width: 720px) {
+  .resume {
+    padding: 30px 24px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .contact span {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+/* Kiểu in ấn: bỏ nền và hiệu ứng bóng */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+  }
+
+  .resume {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  header {
+    page-break-inside: avoid;
+  }
+}
