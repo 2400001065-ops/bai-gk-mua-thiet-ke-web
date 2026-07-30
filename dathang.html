@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="public/style2.css" />
     <title>THÔNG TIN ĐẶT HÀNG</title>
 </head>
 
@@ -22,7 +22,7 @@
         <div class="product-layout">
             <!-- Thẻ hiển thị chi tiết sản phẩm đang chọn -->
             <div class="product-card">
-                <img id="car-image" src="porsche.jpg" alt="Xe mô hình" />
+                <img id="car-image" src="public/img/porsche.jpg" alt="Xe mô hình" />
                 <div class="product-details">
                     <h1 id="car-brand">MÔ HÌNH HOTWHEELS</h1>
                     <h2 id="car-name">PORSCHE 911 CARRERA T</h2>
@@ -64,12 +64,12 @@
     <script>
         // Danh sách các sản phẩm mô hình và thông tin tương ứng
         const cars = {
-            porsche: { brand: 'MÔ HÌNH HOTWHEELS', name: 'PORSCHE 911 CARRERA T', price: '70.000 VNĐ', image: 'porsche.jpg' },
-            merc: { brand: 'MÔ HÌNH MINIGT', name: 'MERCEDES BENZ S680', price: '300.000 VNĐ', image: 'merc.jpg' },
-            nissan: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R34', price: '450.000 VNĐ', image: 'r34.jpg' },
-            mclaren: { brand: 'MÔ HÌNH HOTWHEELS', name: 'MCLAREN W1', price: '70.000 VNĐ', image: 'mclaren.jpg' },
-            r33: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R33', price: '580.000 VNĐ', image: 'r33.jpg' },
-            bentley: { brand: 'MÔ HÌNH MINIGT', name: 'BENTLEY FLYING SPUR', price: '300.000 VNĐ', image: 'bentley.jpg' }
+            porsche: { brand: 'MÔ HÌNH HOTWHEELS', name: 'PORSCHE 911 CARRERA T', price: '70.000 VNĐ', image: 'public/img/porsche.jpg' },
+            merc: { brand: 'MÔ HÌNH MINIGT', name: 'MERCEDES BENZ S680', price: '300.000 VNĐ', image: 'public/img/merc.jpg' },
+            nissan: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R34', price: '450.000 VNĐ', image: 'public/img/r34.jpg' },
+            mclaren: { brand: 'MÔ HÌNH HOTWHEELS', name: 'MCLAREN W1', price: '70.000 VNĐ', image: 'public/img/mclaren.jpg' },
+            r33: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R33', price: '580.000 VNĐ', image: 'public/img/r33.jpg' },
+            bentley: { brand: 'MÔ HÌNH MINIGT', name: 'BENTLEY FLYING SPUR', price: '300.000 VNĐ', image: 'public/img/bentley.jpg' }
         };
 
         // Lấy tham số car từ URL để xác định sản phẩm được chọn
