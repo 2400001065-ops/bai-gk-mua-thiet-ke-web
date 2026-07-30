@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>THÔNG TIN ĐẶT HÀNG</title>
+</head>
+
+<body>
+    <!-- Khung chính cho trang đặt hàng -->
+    <div class="resume">
+        <!-- Thanh điều hướng để chuyển giữa các trang -->
+        <nav class="page-nav">
+            <a href="cv.html">CV</a>
+            <a href="muaxe.html">MUA XE MÔ HÌNH TẠI ĐÂY</a>
+            <a href="dathang.html" class="active">THÔNG TIN ĐẶT HÀNG</a>
+        </nav>
+
+        <!-- Bố cục hiển thị thông tin sản phẩm và form đặt hàng -->
+        <div class="product-layout">
+            <!-- Thẻ hiển thị chi tiết sản phẩm đang chọn -->
+            <div class="product-card">
+                <img id="car-image" src="porsche.jpg" alt="Xe mô hình" />
+                <div class="product-details">
+                    <h1 id="car-brand">MÔ HÌNH HOTWHEELS</h1>
+                    <h2 id="car-name">PORSCHE 911 CARRERA T</h2>
+                    <p id="car-price">Giá: 70.000 VNĐ</p>
+                </div>
+            </div>
+
+            <!-- Thẻ form đặt hàng -->
+            <div class="order-card">
+                <h2>Thông tin đặt hàng</h2>
+                <p class="product-summary" id="product">MÔ HÌNH HOTWHEELS - PORSCHE 911 CARRERA T</p>
+                <form class="order-form">
+                    <div class="form-row">
+                        <label for="fullName">Họ và tên</label>
+                        <input type="text" id="fullName" placeholder="Nhập họ và tên" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Nhập email" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required />
+                    </div>
+                    <div class="form-row">
+                        <label for="address">Địa chỉ</label>
+                        <textarea id="address" rows="3" placeholder="Nhập địa chỉ" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="price">Giá tiền</label>
+                        <input type="text" id="price" readonly />
+                    </div>
+                    <button type="submit" class="order-button">Đặt hàng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Danh sách các sản phẩm mô hình và thông tin tương ứng
+        const cars = {
+            porsche: { brand: 'MÔ HÌNH HOTWHEELS', name: 'PORSCHE 911 CARRERA T', price: '70.000 VNĐ', image: 'porsche.jpg' },
+            merc: { brand: 'MÔ HÌNH MINIGT', name: 'MERCEDES BENZ S680', price: '300.000 VNĐ', image: 'merc.jpg' },
+            nissan: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R34', price: '450.000 VNĐ', image: 'r34.jpg' },
+            mclaren: { brand: 'MÔ HÌNH HOTWHEELS', name: 'MCLAREN W1', price: '70.000 VNĐ', image: 'mclaren.jpg' },
+            r33: { brand: 'MÔ HÌNH KAIDO HOUSE', name: 'NISSAN SKYLINE R33', price: '580.000 VNĐ', image: 'r33.jpg' },
+            bentley: { brand: 'MÔ HÌNH MINIGT', name: 'BENTLEY FLYING SPUR', price: '300.000 VNĐ', image: 'bentley.jpg' }
+        };
+
+        // Lấy tham số car từ URL để xác định sản phẩm được chọn
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get('car') || 'porsche';
+        const selectedCar = cars[key] || cars.porsche;
+
+        // Cập nhật thông tin sản phẩm lên trang
+        document.getElementById('car-brand').textContent = selectedCar.brand;
+        document.getElementById('car-name').textContent = selectedCar.name;
+        document.getElementById('car-price').textContent = `Giá: ${selectedCar.price}`;
+        document.getElementById('product').textContent = `${selectedCar.brand} - ${selectedCar.name}`;
+        document.getElementById('price').value = selectedCar.price;
+        document.getElementById('car-image').src = selectedCar.image;
+        document.getElementById('car-image').alt = selectedCar.name;
+
+        // Xử lý khi người dùng submit form đặt hàng
+        document.querySelector('.order-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+            if (!name) {
+                alert('Vui lòng nhập họ và tên');
+                return;
+            }
+            alert(`Đặt hàng thành công cho ${name}!`);
+        });
+    </script>
+</body>
+
+</html>
