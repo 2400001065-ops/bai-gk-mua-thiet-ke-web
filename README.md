@@ -16,4 +16,4 @@
 
 ## 4. Live Demo
 
-* https://2400001065-ops.github.io/bai-gk-mua-thiet-ke-web/index.html
+* https://2400001065-ops.github.io/bai-gk-mua-thiet-ke-web
