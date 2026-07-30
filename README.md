@@ -7,7 +7,7 @@
 
 ## 2. Mô tả dự án
 
-* **Chủ đề:** Website Portfolio cá nhân kết hợp trang bán xe mô hình
+* **Chủ đề:** Website Profile cá nhân kết hợp trang bán xe mô hình
 * **Mô tả ngắn:** Website giới thiệu thông tin cá nhân, định hướng nghề nghiệp, sở thích sưu tầm, được thiết kế giao diện hiện đại bằng HTML/CSS và tương tác bằng JavaScript.
 
 ## 3. Link thiết kế Figma
