@@ -12,7 +12,7 @@
 
 ## 3. Link thiết kế Figma
 
-* 
+* https://www.figma.com/proto/g6lMygIYjjr89HdalJjOd1/Untitled?node-id=0-1&t=waaFec9KyOFCWrVq-1
 
 ## 4. Live Demo
 
